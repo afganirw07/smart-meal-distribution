@@ -33,7 +33,7 @@ namespace learning_lks
                        "Database Berhasil terkoneksi!",
                           MessageBoxButtons.OK,
                           MessageBoxIcon.Asterisk
-                    ); break;
+                    ); break; 
             }
         }
     }
