@@ -1,4 +1,5 @@
-﻿using learning_lks.Helper;
+﻿using learning_lks.Forms;
+using learning_lks.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,12 +29,17 @@ namespace learning_lks
 
             while (true)
             {
-                MessageBox.Show(
-                    "Database Berhasil terkoneksi!",
-                       "Database Berhasil terkoneksi!",
-                          MessageBoxButtons.OK,
-                          MessageBoxIcon.Asterisk
-                    ); break; 
+
+                using (var login = new FormLogin())
+                {
+                    if (login.ShowDialog() != DialogResult.OK) 
+                        break;
+                }
+
+                using (var main = new FormMain())
+                {
+                    Application.Run(main);
+                }
             }
         }
     }
