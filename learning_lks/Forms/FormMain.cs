@@ -18,11 +18,33 @@ namespace learning_lks.Forms
         public FormMain()
         {
             InitializeComponent();
-            WindowState = FormWindowState.Maximized;
             GetUsernameAndRole();
             ShowUserControl(new UCDashboard(), "Dashboard");
             SetActiveButton(btnDashboard);
+            validateRole();
         }
+
+
+        private void validateRole()
+        {
+            string role = Session.Role;
+
+            bool isSupervisor = role == "SupervisorSPPG";
+            bool isPetugas = role == "PetugasSPPG";
+
+            btnMonitongPemasok.Visible = isSupervisor;
+            btnLaporan.Visible = isSupervisor;
+
+            btnDataPegawai.Visible = isPetugas;
+            btnBahanBaku.Visible =  isPetugas;
+            btnSekolah.Visible =  isPetugas;
+            btnKebutuhan.Visible =  isPetugas;
+            btnPemasok.Visible = isSupervisor || isPetugas;
+
+            btnDashboard.Visible = isSupervisor || isPetugas;
+            btnProfile.Visible = isSupervisor || isPetugas;
+        }
+
 
         private void SetActiveButton(Button button)
         {
@@ -89,6 +111,47 @@ namespace learning_lks.Forms
         {
             ShowUserControl(new UCDataPegawai(), "Data Karyawan");
             SetActiveButton(btnDataPegawai);
+        }
+
+        private void btnBahanBaku_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UCBahanBaku(), "Data Bahan Baku");
+            SetActiveButton(btnBahanBaku);
+        }
+
+        private void btnSekolah_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UCSekolah(), "Data Sekolah Penerima");
+            SetActiveButton(btnSekolah);
+        }
+
+        private void btnKebutuhan_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UCKebutuhanDapur(), "Kebutuhan Dapur");
+            SetActiveButton(btnKebutuhan);
+        }
+
+        private void btnPemasok_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UCPesanan(), "Pesanan ke Pemasok");
+            SetActiveButton(btnPemasok);
+        }
+
+        private void btnMonitongPemasok_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UCMonitoringPemasok(), "Monitoring Pemasok Distribusi");
+            SetActiveButton(btnMonitongPemasok);
+        }
+
+        private void buttonLaporan_Click(object sender, EventArgs e)
+        {
+            ShowUserControl(new UCLaporan(), "Laporan SPPG");
+            SetActiveButton(btnLaporan);
+        }
+
+        private void PanelContent_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -13,7 +13,7 @@ namespace learning_lks.Helper
         public static String Username { get; set; }
         public static String FullName { get; set; }
         public static String Role { get; set; }
-        public static String Position { get; set; }
+        public static String Position { get; set; } 
 
         public static bool IsPetugas => Role == "PetugasSPPG";
         public static bool IsSupervisor => Role == "SuperVisorSPPG";

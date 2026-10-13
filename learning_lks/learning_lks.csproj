@@ -49,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\FormEditBahanBaku.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditBahanBaku.Designer.cs">
+      <DependentUpon>FormEditBahanBaku.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditEmployes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditEmployes.Designer.cs">
+      <DependentUpon>FormEditEmployes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormEditKebutuhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormEditKebutuhan.Designer.cs">
+      <DependentUpon>FormEditKebutuhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +78,24 @@
     </Compile>
     <Compile Include="Forms\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsEditSekolah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsEditSekolah.Designer.cs">
+      <DependentUpon>FormsEditSekolah.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ForrmPemasok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ForrmPemasok.Designer.cs">
+      <DependentUpon>ForrmPemasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormsMonitoringPemasok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormsMonitoringPemasok.Designer.cs">
+      <DependentUpon>FormsMonitoringPemasok.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\Database.cs" />
     <Compile Include="Helper\Session.cs" />
@@ -83,17 +119,65 @@
     <Compile Include="View\UCDataPegawai.Designer.cs">
       <DependentUpon>UCDataPegawai.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UCKebutuhanDapur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCKebutuhanDapur.Designer.cs">
+      <DependentUpon>UCKebutuhanDapur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCLaporan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCLaporan.Designer.cs">
+      <DependentUpon>UCLaporan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCMonitoringPemasok.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCMonitoringPemasok.Designer.cs">
+      <DependentUpon>UCMonitoringPemasok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UCPesanan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCPesanan.Designer.cs">
+      <DependentUpon>UCPesanan.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\UCProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="View\UCProfile.Designer.cs">
       <DependentUpon>UCProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\UCSekolah.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="View\UCSekolah.Designer.cs">
+      <DependentUpon>UCSekolah.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\FormEditBahanBaku.resx">
+      <DependentUpon>FormEditBahanBaku.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditEmployes.resx">
+      <DependentUpon>FormEditEmployes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormEditKebutuhan.resx">
+      <DependentUpon>FormEditKebutuhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsEditSekolah.resx">
+      <DependentUpon>FormsEditSekolah.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ForrmPemasok.resx">
+      <DependentUpon>ForrmPemasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormsMonitoringPemasok.resx">
+      <DependentUpon>FormsMonitoringPemasok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -113,8 +197,23 @@
     <EmbeddedResource Include="View\UCDataPegawai.resx">
       <DependentUpon>UCDataPegawai.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\UCKebutuhanDapur.resx">
+      <DependentUpon>UCKebutuhanDapur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UCLaporan.resx">
+      <DependentUpon>UCLaporan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UCMonitoringPemasok.resx">
+      <DependentUpon>UCMonitoringPemasok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UCPesanan.resx">
+      <DependentUpon>UCPesanan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\UCProfile.resx">
       <DependentUpon>UCProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UCSekolah.resx">
+      <DependentUpon>UCSekolah.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
